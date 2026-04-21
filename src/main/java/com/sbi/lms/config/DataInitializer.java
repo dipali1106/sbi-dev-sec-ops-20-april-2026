@@ -35,13 +35,13 @@ public class DataInitializer {
             // ── Users ─────────────────────────────────────────────────────────
             AppUser manager = new AppUser();
             manager.setEmail("admin@sbi.com");
-            manager.setPasswordHash(passwordEncoder.encode("Admin@123"));
+            manager.setPasswordHash(passwordEncoder.encode("Admin@123456"));
             manager.setRole("MANAGER");
             users.save(manager);
 
             AppUser officer = new AppUser();
             officer.setEmail("officer@sbi.com");
-            officer.setPasswordHash(passwordEncoder.encode("Officer@123"));
+            officer.setPasswordHash(passwordEncoder.encode("Officer@123765"));
             officer.setRole("OFFICER");
             users.save(officer);
 

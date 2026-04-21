@@ -53,3 +53,4 @@ public class AuthController {
         return ResponseEntity.ok(new LoginResponse(jwtUtils.generateToken(user.getEmail(), user.getRole())));
     }
 }
+//commenting
