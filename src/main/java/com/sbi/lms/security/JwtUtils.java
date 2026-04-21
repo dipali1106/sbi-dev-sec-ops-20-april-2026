@@ -39,17 +39,17 @@ public class JwtUtils {
 
 	// ── VULNERABLE — SonarQube rule java:S6418 will flag this ─────────────────
 	// LAB 1 FIX: delete the two lines below and uncomment the @Value field
-	//private static final String JWT_SECRET = "SBIBankingSecretKey2024SBIBankingSecretKey2024";
-	//private static final long JWT_EXPIRY = 86400000; // 24 hours — too long for banking!
+	private static final String JWT_SECRET = "SBIBankingSecretKey2024SBIBankingSecretKey2024";
+	private static final long JWT_EXPIRY = 86400000; // 24 hours — too long for banking!
 	// ──────────────────────────────────────────────────────────────────────────
 
 	// LAB 1 FIX: uncomment these two lines after deleting the hardcoded values
 	// above
-	 @Value("${jwt.secret}")
-	 private String jwtSecret;
+	// @Value("${jwt.secret}")
+	// private String jwtSecret;
 	//
-	 @Value("${jwt.expiration.ms:900000}") // 15 minutes — correct for banking
-	 private long jwtExpirationMs;
+	// @Value("${jwt.expiration.ms:900000}") // 15 minutes — correct for banking
+	// private long jwtExpirationMs;
 
 	public String generateToken(String email, String role) {
 		Key key = Keys.hmacShaKeyFor(JWT_SECRET.getBytes(StandardCharsets.UTF_8));

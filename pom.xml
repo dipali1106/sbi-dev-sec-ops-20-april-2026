@@ -24,6 +24,7 @@
         <sonar.organization>dipali1106</sonar.organization>
         <sonar.projectName>SBI Loan Management System</sonar.projectName>
         <sonar.java.source>17</sonar.java.source>
+        <sonar.host.url>sonarcloud.io</sonar.host.url>
         <!-- <sonar.exclusions>**/test/**,**/generated/**</sonar.exclusions> -->
     </properties>
 
